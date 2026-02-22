@@ -1,27 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { 
   ArrowRight, 
-  CheckCircle, 
   Sparkles, 
   Palette, 
   Code, 
   Rocket, 
-  Users, 
   Star, 
   Mail, 
   Phone, 
   MapPin,
-  ChevronRight,
-  Play
+  ChevronRight
 } from "lucide-react";
 import { showSuccess, showError } from "@/utils/toast";
 import { MadeWithDyad } from "@/components/made-with-dyad";
@@ -96,13 +92,6 @@ const Index = () => {
     }
   ];
 
-  const stats = [
-    { value: "150+", label: "Projects Completed" },
-    { value: "98%", label: "Client Satisfaction" },
-    { value: "50+", label: "Team Members" },
-    { value: "24/7", label: "Support Available" }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
@@ -128,25 +117,7 @@ const Index = () => {
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-8 py-6 border-2">
-                <Play className="mr-2 h-5 w-5" />
-                Watch Demo
-              </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">{stat.value}</div>
-                <div className="text-slate-600">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
